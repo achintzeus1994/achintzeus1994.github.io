@@ -17,22 +17,24 @@ Education
 Work experience
 ======
 * Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+  * Harish Chandra Research Institute
+  * Research: Quantum Computation and Information
+  * Supervisor: Professor Ujjwal Sen
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Summer 2016: Research Assistant
+  * Bhabha Atomic Research Centre
+  * Research: PT Symmetric Quantum Mechanics
+  * Supervisor: Professor Zafar Ahmed
+* Fall 2016/Spring 2017: Research Assistant
+  * Carleton University
+  * Research: Biophotonics
+  * Supervisor: Professor Sangeeta Murugkar
   
 Skills
 ======
 * Matlab
 * Python
   * Pytorch
-  * Sub-skill 2.2
-  * Sub-skill 2.3
 * Mathematica
 
 Publications
@@ -55,4 +57,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Graduate Student Organization Colloquium Chair
