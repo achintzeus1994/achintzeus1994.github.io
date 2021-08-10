@@ -1,7 +1,7 @@
 ---
 title: 'Behavioral and physiological limits to vision in mammals by Greg Field and Alapakkam Sampath'
 date: 2012-08-14
-permalink: /posts/2012/08/blog-post-2/
+permalink: /posts/2012/08/blog-post2/
 tags:
   - Neuroscience
   - Commentary
