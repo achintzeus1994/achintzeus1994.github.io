@@ -19,16 +19,16 @@ Work experience
 * Summer 2015: Research Assistant
   * Harish Chandra Research Institute
   * Research: Quantum Computation and Information
-  * Supervisor: Professor Ujjwal Sen
+  * Supervisor: Dr. Ujjwal Sen
 
 * Summer 2016: Research Assistant
   * Bhabha Atomic Research Centre
   * Research: PT Symmetric Quantum Mechanics
-  * Supervisor: Professor Zafar Ahmed
+  * Supervisor: Dr. Zafar Ahmed
 * Fall 2016/Spring 2017: Research Assistant
   * Carleton University
   * Research: Biophotonics
-  * Supervisor: Professor Sangeeta Murugkar
+  * Supervisor: Dr. Sangeeta Murugkar
   
 Skills
 ======
