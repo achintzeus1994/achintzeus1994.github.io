@@ -1,0 +1,31 @@
+---
+title: 'Behavioral and physiological limits to vision in mammals by Greg Field and Alapakkam Sampath'
+date: 2012-08-14
+permalink: /posts/2012/08/blog-post-2/
+tags:
+  - Neuroscience
+  - Commentary
+---
+This paper tries to summarize the work that has been done over the past one century to answer the question, “How many photons are required to see?” Psychophysical experiments have shown that a dark-adjusted eye can detect a flash of light from which around 100 photons enter the eye. But the question arises, how many of these 100 photons actually impinge on the photo-receptors? So, we can ask what is the minimum number of photons are required for rod cells to create a sensation of sight? On one hand, single photon could be sufficient indicating that photoreceptors have reached the zenith of perfection but on the other hand, they may respond only to a few dozen photons so as to overcome the noise present in the nervous system.
+
+The second section of the paper talks about the psychophysical experiments have been done on just-noticeable flashes. The factors affecting the result are:
+
+Size of spot of light
+Frequency spectrum of light
+Duration of light
+intensity of light
+Quantum efficiency of eye is defined to be the number of photons reaching the cornea to number of photons reaching the retina.
+
+A pioneering experiment performed Hecht and colleagues led to a deeper understanding on the question of vision in dim light. They realized that light flash emits photons stochastically distributed according to Poisson distribution. They assumed that there is some threshold of light detection in the Poisson distributed photons and came to the conclusion that 5 photons spread over 500 photoreceptors can lead to visual sensation. This led to the idea that photoreceptors can absorb even a single photon. The quantum efficiency of eye was found to be 5%.
+
+Horace Barlow explained that the false-positive cases of seeing flashes could be due to internal noise in the eye. He called this insuppressible source of noise, ‘dark light’.
+
+For a photoreceptor(rod) to be able to detect single photons it must be able to satisfy following constraints:
+
+It must overcome inherent cellular noise. This noise comes in two varieties: discrete and continuous. Discrete noise arises from spontaneous thermal activation of rhodopsin. It is also called dark noise and leads to activation of rods every 1-2 minutes. Continuous noise corresponds to spontaneous activation of PDE.
+Low trial to trial variability in response to photon
+Neurotransmitter should reliably send information of a detected photon
+Having transduced a single photon in neural signals, the next step is to transfer this information to the brain without adding much noise. How this is done is the theme of section 4.
+
+Multiple rods converge onto rod bipolar cells(20-50 to 1). Multiple rod bipolar cells converge onto AII amacrine cells(20 to 1) which are coupled to each other via gap junctions. There is a threshold nonlinearity present between the rod and bipolar cell connection and ditto for AII amacrine cells connection.
+
