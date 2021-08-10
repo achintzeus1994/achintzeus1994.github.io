@@ -1,15 +1,14 @@
 ---
-title: "Teaching experience 1"
+title: "Physics 141/142"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+permalink: /teaching/2017-fall-teaching-1
+venue: "Duke University, Physics Department"
+date: 2017-08-01
+location: "Durham, USA"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
+I have taught the introductory mechanics and electromagnetism course as a recitation instructor and experiment supervisor at various times
 Heading 1
 ======
 
