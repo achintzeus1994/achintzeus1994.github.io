@@ -9,11 +9,4 @@ location: "Durham, USA"
 ---
 
 I have taught the introductory mechanics and electromagnetism course as a recitation instructor and experiment supervisor at various times
-Heading 1
-======
 
-Heading 2
-======
-
-Heading 3
-======
