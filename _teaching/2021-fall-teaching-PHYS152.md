@@ -8,5 +8,5 @@ date: 2021-08-30
 location: "Durham, USA"
 ---
 
-[Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Recitation_1.pdf)
+Recitation1: [Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Recitation_1.pdf)
 
