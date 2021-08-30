@@ -8,5 +8,5 @@ date: 2021-08-30
 location: "Durham, USA"
 ---
 
-I have taught the introductory mechanics and electromagnetism course as a recitation instructor and experiment supervisor at various times
+[Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Recitation_1.pdf)
 
