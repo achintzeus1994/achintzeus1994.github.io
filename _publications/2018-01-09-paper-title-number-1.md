@@ -9,7 +9,5 @@ paperurl: 'https://iopscience.iop.org/article/10.1088/1361-6560/aaa176/meta'
 ---
 Undergrad thesis
 [Thesis Report](https://achintzeus1994.github.io/assets/thesis/Report.pdf)
-
 [Thesis Presentation](https://achintzeus1994.github.io/assets/thesis/Thesis_Presentation.pdf)
-
 [Thesis publication](https://iopscience.iop.org/article/10.1088/1361-6560/aaa176/meta)
