@@ -8,4 +8,5 @@ venue: 'Physics in Medicine & Biology'
 paperurl: 'https://iopscience.iop.org/article/10.1088/1361-6560/aaa176/meta'
 ---
 Undergrad thesis
+[Thesis Report](https://achintzeus1994.github.io/assets/thesis/Report.pdf)
 [Download paper here](https://iopscience.iop.org/article/10.1088/1361-6560/aaa176/meta)
