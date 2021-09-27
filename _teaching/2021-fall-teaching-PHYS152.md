@@ -12,4 +12,5 @@ Recitation1: [Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Re
 Recitation2: [Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Recitation_2.pdf)
 Recitation3: [Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Recitation_3.pdf)
 Recitation4: [Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Recitation_4.pdf)
+Recitation5: [Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Recitation_5.pdf)
 
