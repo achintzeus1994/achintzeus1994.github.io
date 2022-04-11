@@ -1,9 +1,7 @@
 ---
 title: "Teaching Statement"
 collection: teaching
-type: "Teaching Statement"
 permalink: /teaching/2022-teaching-statement
-date: 2022-04-11
 location: "Durham, USA"
 ---
 
