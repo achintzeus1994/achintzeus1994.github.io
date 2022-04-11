@@ -2,6 +2,7 @@
 title: "Teaching Statement"
 collection: teaching
 permalink: /teaching/2022-teaching-statement
+venue: "Duke University, Physics Department"
 location: "Durham, USA"
 ---
 
