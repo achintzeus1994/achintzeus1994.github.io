@@ -4,7 +4,7 @@ collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2022-teaching-statement
 venue: "Duke University, Physics Department"
-date: 2017-08-01
+date: 2022-04-11
 location: "Durham, USA"
 ---
 
