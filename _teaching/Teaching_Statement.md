@@ -1,5 +1,5 @@
 ---
-title: "Physics 141/142"
+title: "Teaching Statement"
 collection: teaching
 type: "Teaching Statement"
 permalink: /teaching/2022-teaching-statement
