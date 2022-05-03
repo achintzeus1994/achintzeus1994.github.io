@@ -8,4 +8,4 @@ date: 2022-01-30
 location: "Durham, USA"
 ---
 
-Lecture41: [Link to slides](https://achintzeus1994.github.io/assets/PHYS152/Recitation_1.pdf)
+Lecture41 The Brownian Movement: [Link to slides](https://achintzeus1994.github.io/assets/Feynman_Lectures/Lecture_41_The_Brownian_Movement.pdf)
