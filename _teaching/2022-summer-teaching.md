@@ -1,5 +1,5 @@
 ---
-title: "Physics 152"
+title: "Physics 141"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2022-phys141
