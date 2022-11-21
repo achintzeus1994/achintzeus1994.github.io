@@ -8,4 +8,4 @@ redirect_from:
   - /about.html
 ---
 
-I am a fifth-year PhD candidate in Physics department. I received my undergraduate degree in Physics and Electrical Engineering from BITS Pilani, India in 2017. My research is on using machine learning techniques to understand ultrasonic vocalizations in mice. In my spare time, I like to read about the history of science, play tennis, and go hiking.
+I graduated with PhD in Physics from Duke  University. For my PhD, I worked on three projects. In the first project, I  proposed a novel multimodal, identifiable variational autoencoder. In my second project, I created a mathematical model for olfactory memory. In my third project, I used variational autoencoder framework coupled with maximum mean discrepancy analysis to resolve an ongoing debate in neuroscience about difference in ultrasonic vocalization of hearing and deaf mice. I received my undergraduate degree in Physics and Electrical Engineering from BITS Pilani, India in 2017. Currently, I am looking for jobs in academic positions in physics and applied math department.
