@@ -1,7 +1,7 @@
 ---
 title: 'Ollama+Open WebUI Setup'
-date: 2021-08-10
-permalink: /posts/2021/08/ollama_openwebui/
+date: 2024-08-10
+permalink: /posts/2024/08/ollama_openwebui/
 tags:
   - LLM
 ---
