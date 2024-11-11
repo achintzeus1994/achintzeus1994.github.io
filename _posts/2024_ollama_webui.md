@@ -11,8 +11,7 @@ tags:
 </script>
 
 <h1 id="introduction">Introduction</h1>
-```html
-<!-- A simple HTML block with a "copy" button -->
+
 <pre>
 <code class="code-to-copy">
 let message = "Hello, World!";
