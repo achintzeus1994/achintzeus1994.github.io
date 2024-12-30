@@ -18,6 +18,6 @@ tags:
 <h1 id="lipids">Lipids</h1>
 <p>Triglycerides (Fats): Glycerol + fatty acids </p>
 <p>Phospholipids: Maltose, sucrose, lactose</p>
-<p>Sterols: s</p>
+<h1 id="sterols">Sterols</h1>
 
 
