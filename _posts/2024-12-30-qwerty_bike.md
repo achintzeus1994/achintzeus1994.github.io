@@ -1,6 +1,6 @@
 ---
 title: 'qwerty Physics'
-date: 2024-08-10
+date: 2024-12-30
 permalink: /posts/2024/08/qwerty_Physics/
 tags:
   - Physics
