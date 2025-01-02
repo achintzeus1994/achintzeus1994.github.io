@@ -3,7 +3,7 @@ title: 'Nutrition'
 date: 2024-12-30
 permalink: /posts/2024/08/nutrition/
 tags:
-  - Physics
+  - Nutrition
 ---
 <!-- MathJax -->
 <script type="text/javascript"
@@ -41,7 +41,7 @@ tags:
 <p> Biotin</p>
 <p> Pantothenic Acid: Helps produce coenzyme A</p>
 <p> B6: Helps produce coenzyme PLP (stored in muscle: excess causes nerve damage [EXCEPTION])</p>
-<p> Folic Acid: Hleps produce THF</p>
+<p> Folic Acid: Helps produce THF</p>
 <p> B12: Exclusively found in animal products</p>
 
 <h1 id="vitaminc">Vitamin C</h1>
@@ -53,4 +53,36 @@ tags:
 <p>Hard water: Presence of Ca, Mg. Good for drinking.<\p>
 <p>Soft water: Presence of Sodium. Bad for drinking, good for washing.</p>
 <p> Fluid regulation: sodium -> water retention -> blood volume -> blood pressure</p>
-<p> pH regulation: 7.35-7.45(normal range), 6.8 or 8 causes death. Maintained by bicarbonate-carbonic acid buffer system</p>
+<p> pH regulation: 7.35-7.45(normal range), 6.8 or 8 causes death. </p>
+<h2>Bicarbonate-Carbonic Acid Buffer System</h2>
+<p>The bicarbonate-carbonic acid buffer system reaction:</p>
+<p>
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mi>CO</mi><msub><mi>2</mi><mi>(g)</mi></msub>
+    <mo>+</mo>
+    <msub><mi>H</mi><mi>2</mi></msub><mi>O</mi>
+    <mo>&harr;</mo>
+    <msub><mi>H</mi><mi>2</mi></msub><mi>CO</mi><msub><mi>3</mi></msub>
+    <mo>&harr;</mo>
+    <mi>H</mi><mo>⁺</mo><mo>+</mo><msub><mi>HCO</mi><mi>3</mi></msub><mo>⁻</mo>
+  </math>
+</p>
+
+<h2>Henderson-Hasselbalch Equation</h2>
+<p>The Henderson-Hasselbalch equation:</p>
+<p>
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <msub><mi>pH</mi></msub>
+    <mo>=</mo>
+    <msub><mi>pKa</mi></msub>
+    <mo>+</mo>
+    <mrow>
+      <mo>log</mo>
+      <mo>&#8289;</mo>
+      <mfrac>
+        <mi>[A⁻]</mi>
+        <mi>[HA]</mi>
+      </mfrac>
+    </mrow>
+  </math>
+</p>
