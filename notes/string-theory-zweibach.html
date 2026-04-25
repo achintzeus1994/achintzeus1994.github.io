@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>String Theory - Zweibach</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #5f6c7b;
+      --rule: #d9e2ec;
+      --accent: #167a80;
+      --surface: #f7faf9;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.68;
+    }
+    .site-header {
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 255, 255, 0.96);
+    }
+    .site-nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .site-title {
+      margin-right: auto;
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .site-nav a {
+      color: var(--ink);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .site-nav a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 22px 72px;
+    }
+    h1, h2, h3 {
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 1.4rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+    h2 {
+      margin-top: 2.4rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--rule);
+      color: var(--accent);
+    }
+    h3 {
+      margin-top: 1.8rem;
+      color: var(--ink);
+    }
+    p, li {
+      font-size: 1.02rem;
+    }
+    li {
+      margin: 0.35rem 0;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem auto;
+      border-radius: 8px;
+      border: 1px solid var(--rule);
+      background: var(--surface);
+    }
+    table {
+      width: 100%;
+      margin: 1.5rem 0;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      padding: 0.7rem 0.85rem;
+      border: 1px solid var(--rule);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+    .math-block {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      padding: 0.85rem 1rem;
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+    }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      color: var(--muted);
+      border-left: 3px solid var(--rule);
+    }
+    a {
+      color: var(--accent);
+    }
+  </style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-title" href="/">Achint Kumar</a>
+      <a href="/publications/">Publications</a>
+      <a href="/talks/">Talks</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/year-archive/">Notes</a>
+      <a href="/cv/">CV</a>
+    </nav>
+  </header>
+  <main>
+<h1>String Theory - Zweibach</h1>
+<p>These notes follow the early arc of Barton Zwiebach's string theory treatment: start with the relativistic point particle, replace a worldline with a worldsheet, use gauge symmetry to simplify the dynamics, and then quantize the remaining physical oscillators. The big idea is beautifully economical: a string is not a particle with extra decoration. A particle is the limiting case of an object whose history is a line; a string's history is a two-dimensional surface.</p>
+<h2>Relativistic Free Particle Action</h2>
+<p>Before writing a string action, it helps to remember how a free relativistic particle is described. The action should count invariant length in spacetime, so it should not depend on the particular parameter we use to trace the worldline.</p>
+<ol>
+<li>With coordinate time:</li>
+</ol>
+<div class="math-block">$$
+S=-m\int dt\sqrt{1-v^2}
+$$</div>
+<p>This form is intuitive: the particle extremizes proper time. It is also a little awkward because it singles out coordinate time $t$.</p>
+<ol>
+<li>With an arbitrary worldline parameter:</li>
+</ol>
+<div class="math-block">$$
+S=-m\int d\tau \sqrt{-\dot{x}^2},\qquad \dot{x}^2=\eta_{\mu\nu}\dot{x}^{\mu}\dot{x}^{\nu}
+$$</div>
+<p>Here $\tau$ is any parameter along the trajectory, not necessarily proper time. The square root makes the action invariant under reparameterizations $\tau\to \tilde{\tau}(\tau)$.</p>
+<ol>
+<li>With an einbein:</li>
+</ol>
+<div class="math-block">$$
+S=\frac{1}{2}\int d\tau \left(e^{-1}\dot{x}^2-em^2\right),\qquad \dot{x}^2=\eta_{\mu\nu}\dot{x}^{\mu}\dot{x}^{\nu}
+$$</div>
+<p>The scalar density $e(\tau)$ is the one-dimensional analogue of a metric on the worldline. It linearizes the square root and also behaves well for $m=0$, where the square-root action is less convenient.</p>
+<p>Varying $e(\tau)$ gives the constraint</p>
+<div class="math-block">$$
+\dot{x}^2+e^2m^2=0.
+$$</div>
+<p>Varying $x^{\mu}$ gives</p>
+<div class="math-block">$$
+\frac{d}{d\tau}\left(\frac{1}{e}\dot{x}_{\mu}\right)=0.
+$$</div>
+<p>In the gauge $e=1/m$, this is just straight-line motion with constant momentum. The lesson is the one we will reuse for strings: introduce an auxiliary metric-like variable, then use its equation of motion to recover the geometric square-root action.</p>
+<h2>Relativistic Free String Action</h2>
+<p>A particle sweeps out a worldline. A string sweeps out a worldsheet, parameterized by $(\tau,\sigma)$ and embedded in spacetime by $X^\mu(\tau,\sigma)$. The parameter $\tau$ plays the role of worldsheet time, while $\sigma$ labels points along the string.</p>
+<h3>Nambu-Goto Action</h3>
+<div class="math-block">$$
+S=-T\int d\tau d\sigma\sqrt{(\dot{X}\cdot X')^2-\dot{X}^2X'^2}.
+$$</div>
+<p>Here $\dot{X}=\partial_\tau X$, $X'=\partial_\sigma X$, and $T$ is the string tension. This action is the area of the worldsheet multiplied by $-T$, just as the point-particle action is the length of the worldline multiplied by $-m$.</p>
+<p>The tension is usually written in terms of the Regge slope $\alpha'$:</p>
+<div class="math-block">$$
+T=\frac{1}{2\pi\alpha'}.
+$$</div>
+<p>Large tension means a stiff string; large $\alpha'$ means a more easily excited string.</p>
+<h3>Polyakov Action</h3>
+<div class="math-block">$$
+S=-\frac{T}{2}\int d\tau d\sigma \sqrt{-h}\,h^{\alpha\beta}\partial_{\alpha}X^{\mu}\partial_{\beta}X^{\nu}\eta_{\mu\nu}.
+$$</div>
+<p>The Polyakov action introduces an independent worldsheet metric $h_{\alpha\beta}$. Classically, eliminating $h_{\alpha\beta}$ by its equation of motion gives the Nambu-Goto action. The advantage is enormous: the Polyakov form is quadratic in $X^\mu$, so the equations of motion become wave equations after gauge fixing.</p>
+<h2>Symmetries of the Polyakov Action</h2>
+<ul>
+<li>Poincare invariance: The target spacetime coordinates transform as $X^\mu\to \Lambda^\mu_{\ \nu}X^\nu+a^\mu$. This is ordinary spacetime symmetry.</li>
+<li>Reparameterization invariance: The worldsheet coordinates $(\tau,\sigma)$ can be relabeled without changing physics. This is two-dimensional diffeomorphism invariance.</li>
+<li>Weyl invariance: The worldsheet metric can be locally rescaled, $h_{\alpha\beta}\to e^{2\omega(\tau,\sigma)}h_{\alpha\beta}$, without changing the classical action.</li>
+</ul>
+<p>The last two symmetries are what make string theory special. Together they let us remove the unphysical parts of the worldsheet metric. In two dimensions, &quot;metric geometry&quot; becomes mostly gauge.</p>
+<h2>Conformal Gauge</h2>
+<p>Using reparameterization plus Weyl invariance, we can choose conformal gauge:</p>
+<div class="math-block">$$
+h_{\alpha\beta}=\eta_{\alpha\beta}.
+$$</div>
+<p>This makes the worldsheet metric flat locally and simplifies the equation of motion to</p>
+<div class="math-block">$$
+\Box X^{\mu}=(\partial_\tau^2-\partial_\sigma^2)X^{\mu}=0.
+$$</div>
+<p>This is the 1+1 dimensional wave equation, whose general local solution is</p>
+<div class="math-block">$$
+X^{\mu}(\tau,\sigma)=X_L^{\mu}(\tau+\sigma)+X_R^{\mu}(\tau-\sigma).
+$$</div>
+<p>$X_L^\mu$ and $X_R^\mu$ are left-moving and right-moving waves on the string. The string is literally made of waves, and the different standing or traveling wave patterns are what later appear as different particle states.</p>
+<p>Conformal gauge does not remove every constraint. The stress tensor must still vanish:</p>
+<div class="math-block">$$
+T_{\alpha\beta}=0.
+$$</div>
+<p>In light-cone coordinates $\sigma^\pm=\tau\pm\sigma$, this becomes</p>
+<div class="math-block">$$
+(\partial_+X)^2=0,\qquad (\partial_-X)^2=0.
+$$</div>
+<p>These are the Virasoro constraints. They remove negative-norm excitations and connect the oscillator modes to the spacetime mass spectrum.</p>
+<h2>Open and Closed String Solutions</h2>
+<ul>
+<li>For closed strings, waves can travel clockwise and counter-clockwise around the loop. The left- and right-moving sectors are independent, except for a matching condition called level matching.</li>
+<li>For open strings, waves reflect at the endpoints. The boundary conditions tie left- and right-moving waves together, producing standing wave modes.</li>
+</ul>
+<p>Boundary conditions are not a side detail; they decide what kind of object the string endpoint can touch. Neumann conditions mean an endpoint is free to move in that direction. Dirichlet conditions mean it is fixed to a surface, which is the seed of D-branes.</p>
+<h2>Light-Cone Gauge</h2>
+<p>Light-cone gauge solves the constraints explicitly by using coordinates</p>
+<div class="math-block">$$
+X^\pm=\frac{1}{\sqrt{2}}(X^0\pm X^{D-1}).
+$$</div>
+<p>One chooses $X^+$ to be proportional to worldsheet time. Then $X^-$ is determined by the constraints, leaving only the transverse coordinates</p>
+<div class="math-block">$$
+X^I(\tau,\sigma),\qquad I=1,\dots,D-2
+$$</div>
+<p>as independent physical degrees of freedom. This is why the transverse oscillator number operator is central:</p>
+<div class="math-block">$$
+N^{\perp}=\sum_{n=1}^{\infty}\alpha^{I}_{-n}\alpha^{I}_{n}.
+$$</div>
+<p>Each oscillator $\alpha^I_{-n}$ creates a quantum of vibration with mode number $n$ and transverse polarization $I$.</p>
+<h2>Open String</h2>
+<p>For an open string, take $\sigma\in[0,\pi]$.</p>
+<h3>Neumann Boundary Conditions</h3>
+<p>Free endpoints obey</p>
+<div class="math-block">$$
+\partial_{\sigma}X^{\mu}(\tau,0)=\partial_{\sigma}X^{\mu}(\tau,\pi)=0.
+$$</div>
+<p>The mode expansion is</p>
+<div class="math-block">$$
+X^{\mu}(\tau,\sigma)=x_0^{\mu}+\sqrt{2\alpha'}\alpha_0^{\mu}\tau+i\sqrt{2\alpha'}\sum_{n \neq 0}\frac{1}{n}\alpha_n^{\mu}e^{-in\tau}\cos n\sigma.
+$$</div>
+<p>The cosine appears because Neumann boundary conditions require the derivative in the $\sigma$ direction to vanish at both endpoints.</p>
+<p>Canonical quantization gives</p>
+<div class="math-block">$$
+[\alpha^I_m,\alpha^J_n]=m\delta_{m+n,0}\delta^{IJ}.
+$$</div>
+<p>The open-string mass formula is</p>
+<div class="math-block">$$
+M^2=-p^{\mu}p_{\mu}=\frac{1}{\alpha'}(N^{\perp}-1).
+$$</div>
+<p>The constant $-1$ is the normal-ordering intercept in bosonic string theory. It gives a tachyonic ground state at $N^\perp=0$, while the first excited level $N^\perp=1$ is massless.</p>
+<p>That first excited state has the form</p>
+<div class="math-block">$$
+\alpha^I_{-1}|0;p\rangle.
+$$</div>
+<p>It transforms like a vector in spacetime. In more complete string theories, this is the beginning of gauge particles appearing as vibrational modes.</p>
+<p>The transverse Virasoro operators are</p>
+<div class="math-block">$$
+L_{n}^{\perp}=\frac{1}{2}\sum_{p=-\infty}^{\infty}\alpha^{I}_{n-p}\alpha^{I}_{p}\qquad (n\neq 0),
+$$</div>
+<p>and</p>
+<div class="math-block">$$
+L_{0}^{\perp}=\alpha'p^{I}p^{I}+N^{\perp}.
+$$</div>
+<p>Their commutator is</p>
+<div class="math-block">$$
+[L_{m}^{\perp},L_{n}^{\perp}]=(m-n)L_{m+n}^{\perp}+\frac{D-2}{12}(m^3-m)\delta_{m+n,0}.
+$$</div>
+<p>The central term is the quantum residue of the infinitely many oscillator modes. Requiring Lorentz symmetry after quantization fixes the bosonic string's critical dimension:</p>
+<div class="math-block">$$
+D=26.
+$$</div>
+<h2>Closed String</h2>
+<p>For a closed string, take $\sigma\in[0,2\pi]$ with periodicity</p>
+<div class="math-block">$$
+X^{\mu}(\tau,\sigma+2\pi)=X^{\mu}(\tau,\sigma).
+$$</div>
+<p>The closed string has two independent oscillator families, one left-moving and one right-moving:</p>
+<div class="math-block">$$
+X^{\mu}(\tau,\sigma)=x_0^{\mu}+\sqrt{2\alpha'}\alpha_0^{\mu}\tau
++i\sqrt{\frac{\alpha'}{2}}\sum_{n\neq 0}\frac{1}{n}\left(
+\alpha_n^\mu e^{-in(\tau-\sigma)}
++\tilde{\alpha}_n^\mu e^{-in(\tau+\sigma)}
+\right).
+$$</div>
+<p>The oscillator algebra is</p>
+<div class="math-block">$$
+[\alpha^I_m,\alpha^J_n]=m\delta_{m+n,0}\delta^{IJ},\qquad
+[\tilde{\alpha}^I_m,\tilde{\alpha}^J_n]=m\delta_{m+n,0}\delta^{IJ},
+$$</div>
+<p>with left and right oscillators commuting with each other.</p>
+<p>The number operators are</p>
+<div class="math-block">$$
+N^\perp=\sum_{n=1}^{\infty}\alpha^I_{-n}\alpha^I_n,\qquad
+\tilde{N}^\perp=\sum_{n=1}^{\infty}\tilde{\alpha}^I_{-n}\tilde{\alpha}^I_n.
+$$</div>
+<p>The closed-string mass formula is</p>
+<div class="math-block">$$
+M^2=\frac{2}{\alpha'}\left(N^\perp+\tilde{N}^\perp-2\right),
+$$</div>
+<p>with the level-matching condition</p>
+<div class="math-block">$$
+N^\perp=\tilde{N}^\perp.
+$$</div>
+<p>The first excited closed-string level is</p>
+<div class="math-block">$$
+\alpha^I_{-1}\tilde{\alpha}^J_{-1}|0;p\rangle.
+$$</div>
+<p>The product of two vector polarizations decomposes into three pieces:</p>
+<ul>
+<li>a symmetric traceless tensor $G_{\mu\nu}$, interpreted as the graviton;</li>
+<li>an antisymmetric tensor $B_{\mu\nu}$;</li>
+<li>a scalar trace part $\Phi$, called the dilaton.</li>
+</ul>
+<p>This is one of the most striking moments in perturbative string theory: a quantum theory of one-dimensional extended objects automatically contains a massless spin-2 excitation. In spacetime language, that is gravity.</p>
+<h2>Big Picture</h2>
+<p>The early structure of string theory can be summarized as a ladder:</p>
+<ol>
+<li>A relativistic particle extremizes worldline length.</li>
+<li>A relativistic string extremizes worldsheet area.</li>
+<li>The Polyakov action replaces the area square root with a two-dimensional metric.</li>
+<li>Gauge symmetries reduce the dynamics to transverse waves.</li>
+<li>Quantized waves become particle states.</li>
+<li>Open strings naturally give vector-like states; closed strings naturally give gravity-like states.</li>
+</ol>
+<p>The formal machinery can feel heavy, but the intuition is clean: particles are notes played by a string. Mass, spin, and interaction type are not separate ingredients added by hand; they arise from the allowed vibrational patterns.</p>
+  </main>
+</body>
+</html>
