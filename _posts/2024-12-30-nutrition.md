@@ -6,6 +6,15 @@ tags:
   - Nutrition
 ---
 <!-- MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    }
+  });
+</script>
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
@@ -71,14 +80,14 @@ A standard lipid panel directly measures or reports:
 
 The traditional Friedewald estimate, when values are in mg/dL, is
 
-\[
+$$
 \mathrm{LDL}\text{-}C
 = \mathrm{Total\ cholesterol}
 - \mathrm{HDL}\text{-}C
 - \frac{\mathrm{Triglycerides}}{5}.
-\]
+$$
 
-The term \(\mathrm{Triglycerides}/5\) estimates VLDL cholesterol. This approximation is less reliable when triglycerides are high, and many laboratories now use newer LDL estimation methods or direct LDL measurement in some settings.
+The term $\mathrm{Triglycerides}/5$ estimates VLDL cholesterol. This approximation is less reliable when triglycerides are high, and many laboratories now use newer LDL estimation methods or direct LDL measurement in some settings.
 
 Dietary fats affect blood lipids differently. Saturated fat tends to raise LDL cholesterol. Trans fats tend to raise LDL and lower HDL, which is why they are considered especially harmful. Unsaturated fats, especially when they replace saturated or trans fats, are generally more favorable for blood lipid profiles.
 
@@ -162,12 +171,12 @@ Hard water contains more calcium and magnesium. Soft water contains fewer divale
 
 Fluid regulation is tightly connected to sodium:
 
-\[
+$$
 \text{sodium balance}
 \longrightarrow \text{water retention}
 \longrightarrow \text{blood volume}
 \longrightarrow \text{blood pressure}.
-\]
+$$
 
 The body regulates water through thirst, kidney function, antidiuretic hormone (ADH), aldosterone, and natriuretic peptides. In broad strokes:
 
@@ -177,37 +186,37 @@ The body regulates water through thirst, kidney function, antidiuretic hormone (
 
 # Acid-Base Balance
 
-Blood pH is normally slightly basic, roughly \(7.35\) to \(7.45\). The body keeps it close to this range because protein structure, enzyme activity, oxygen binding, and ion channel behavior all depend on pH.
+Blood pH is normally slightly basic, roughly $7.35$ to $7.45$. The body keeps it close to this range because protein structure, enzyme activity, oxygen binding, and ion channel behavior all depend on pH.
 
 The most important buffer system in blood is the bicarbonate buffer:
 
-\[
+$$
 \mathrm{CO_2 + H_2O \rightleftharpoons H_2CO_3
 \rightleftharpoons H^+ + HCO_3^-}.
-\]
+$$
 
-Carbon dioxide behaves as the respiratory component of this buffer system because the lungs can remove \(\mathrm{CO_2}\). Bicarbonate behaves as the metabolic or renal component because the kidneys can regulate \(\mathrm{HCO_3^-}\) and hydrogen ion excretion.
+Carbon dioxide behaves as the respiratory component of this buffer system because the lungs can remove $\mathrm{CO_2}$. Bicarbonate behaves as the metabolic or renal component because the kidneys can regulate $\mathrm{HCO_3^-}$ and hydrogen ion excretion.
 
 The Henderson-Hasselbalch equation is
 
-\[
+$$
 \mathrm{pH} = \mathrm{p}K_a + \log_{10}\left(\frac{[\mathrm{A^-}]}{[\mathrm{HA}]}\right).
-\]
+$$
 
 For the bicarbonate system in blood, a common physiological form is
 
-\[
+$$
 \mathrm{pH} = 6.1 + \log_{10}
 \left(
 \frac{[\mathrm{HCO_3^-}]}
 {0.03\,P_{\mathrm{CO_2}}}
 \right).
-\]
+$$
 
 This equation explains why both lungs and kidneys matter:
 
-* If ventilation decreases, \(\mathrm{CO_2}\) rises and pH falls.
-* If ventilation increases, \(\mathrm{CO_2}\) falls and pH rises.
+* If ventilation decreases, $\mathrm{CO_2}$ rises and pH falls.
+* If ventilation increases, $\mathrm{CO_2}$ falls and pH rises.
 * If bicarbonate falls, pH falls.
 * If bicarbonate rises, pH rises.
 
