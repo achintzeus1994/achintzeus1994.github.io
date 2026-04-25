@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transcription Regulatory Networks</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #5f6c7b;
+      --rule: #d9e2ec;
+      --accent: #167a80;
+      --surface: #f7faf9;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.68;
+    }
+    .site-header {
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 255, 255, 0.96);
+    }
+    .site-nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .site-title {
+      margin-right: auto;
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .site-nav a {
+      color: var(--ink);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .site-nav a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 22px 72px;
+    }
+    h1, h2, h3 {
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 1.4rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+    h2 {
+      margin-top: 2.4rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--rule);
+      color: var(--accent);
+    }
+    p, li {
+      font-size: 1.02rem;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem auto;
+      border-radius: 8px;
+      border: 1px solid var(--rule);
+      background: var(--surface);
+    }
+    table {
+      width: 100%;
+      margin: 1.5rem 0;
+      border-collapse: collapse;
+      overflow-x: auto;
+      display: block;
+    }
+    th, td {
+      padding: 0.7rem 0.85rem;
+      border: 1px solid var(--rule);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--surface);
+    }
+    .math-block {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      padding: 0.85rem 1rem;
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+    }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      color: var(--muted);
+      border-left: 3px solid var(--rule);
+    }
+    a {
+      color: var(--accent);
+    }
+  </style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-title" href="/">Achint Kumar</a>
+      <a href="/publications/">Publications</a>
+      <a href="/talks/">Talks</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/year-archive/">Notes</a>
+      <a href="/cv/">CV</a>
+    </nav>
+  </header>
+  <main>
+<h1>Transcription Regulatory Networks</h1>
+<p><img src="../assets/notion/IMG_59D8A199EF47-1.jpeg" alt="IMG_59D8A199EF47-1.jpeg"></p>
+<p><em>E. coli</em> has 300 degrees of freedom (transcription factors) to model the environment and regulate the production of 4500 proteins.</p>
+<p><strong>Promoter:</strong> It is sequence of base pairs that precedes the genes and determines the rate of gene expression. RNAp (RNA polymerase) binds to this site.</p>
+<p>Transcription factors can bind to the promotor to increase the transcription rate of the gene (acting as activators) or reduce the transcription rate (acting as repressors). </p>
+<p>In <em>E. coli</em> 60% of TF are activators and 40% are repressors. </p>
+<p>Each transcription factor acts primarily in one mode for its target genes: either as an activator or a repressor</p>
+<table>
+<thead>
+<tr>
+<th><strong>Neural Network</strong></th>
+<th><strong>Transcription network</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Neurons: 80% Excitatory, 20% Inhibitory</td>
+<td>TF: 60% Activators, 40% Repressors</td>
+</tr>
+<tr>
+<td>Dales law: Each neuron is either excitatory or inhibitory</td>
+<td>Each TF is either activator or repressor for its target genes</td>
+</tr>
+<tr>
+<td>Number of neurons: 302</td>
+<td>Number of TFs: 300</td>
+</tr>
+</tbody></table>
+<p>Let X be the concentration of transcription factor and Y be the rate of production of protein controlled by X. Then, Y=f(X) where f is Hill function. </p>
+<p>When acting as activator:</p>
+<div class="math-block">$$
+f(X)=\beta\frac{X^n}{K^n+X^n}
+$$</div>
+<p>When acting as repressor:</p>
+<div class="math-block">$$
+f(X)=\beta\frac{K^n}{K^n+X^n}
+$$</div>
+<p>Here, $\beta$ is the maximal promotor activity, K is the activation coefficient which is about the concentration needed to significantly start producing protein X and n = 1-4.</p>
+<p>A logic approximation can be made using step function $\theta$:</p>
+<p>For activator:</p>
+<div class="math-block">$$
+f(X)=\beta \theta(X>K)
+$$</div>
+<p>For repressor:</p>
+<div class="math-block">$$
+f(X)=\beta \theta(X<K)
+$$</div>
+<p>Examples:</p>
+<p>AND gate: A gene requiring 2 activator proteins (TF) to bind simultaneously:</p>
+<div class="math-block">$$
+f(X)=\beta \theta(X>K)\theta(Y>K) =X \; \mathrm{and} \;Y
+$$</div>
+<p>SUM gate:</p>
+<div class="math-block">$$
+f(X, Y)=\beta_X X+\beta_Y Y
+$$</div>
+<h2>Network motifs in sensory networks</h2>
+<p><strong>Simple regulation:</strong> Dynamics of protein production (X):</p>
+<div class="math-block">$$
+\frac{dX}{dt}=\beta-\alpha X
+$$</div>
+<p>Here, $\beta$ is production rate and $\alpha$ is removal rate.</p>
+<p><strong>Negative Autoregulation (NAR):</strong> Negative autoregulation (NAR) occurs when a transcription factor represses the transcription of its own gene. This network motif occurs in about half of the repressors in <em>E. coli</em> and in many eukaryotic repressors. </p>
+<p>NAR has 2 functions:</p>
+<ul>
+<li>It speeds up protein production.</li>
+<li>It reduces cell–cell variation in protein levels.</li>
+</ul>
+<div class="math-block">$$
+\frac{dX}{dt}=f(X)-\alpha X
+$$</div>
+<p>where f(.) is the repressor function.</p>
+<p><img src="../assets/notion/Screenshot_2025-05-11_at_10.24.15_PM.png" alt="Screenshot 2025-05-11 at 10.24.15 PM.png"></p>
+<p><img src="../assets/notion/Screenshot_2025-01-04_at_2.10.51_AM.png" alt="Screenshot 2025-01-04 at 2.10.51 AM.png"></p>
+<p><strong>Positive autoregulation:</strong> Positive autoregulation (PAR) occurs when a transcription factor enhances its own rate of production. The effects are opposite to those of NAR: response times are slowed and variations usually enhanced.</p>
+<p><strong>Feedforward loops</strong>: Two types: coherent and incoherent. Coherent FFL have the same effect (activating or repressing) on both branches while Incoherent FFL have opposite effect on the two branches.</p>
+<p><img src="../assets/notion/Screenshot_2025-01-04_at_2.45.31_AM.png" alt="Screenshot 2025-01-04 at 2.45.31 AM.png"></p>
+<p>Coherent type 1 (C1) and incoherent type 1 (I1) are most common.</p>
+<p><strong>C1-FFL:</strong> The C1-FFL is a ‘sign-sensitive delay’ element and a persistence detector.</p>
+<p><img src="../assets/notion/Screenshot_2025-03-07_at_5.41.50_PM.png" alt="Screenshot 2025-03-07 at 5.41.50 PM.png"></p>
+<p>C1 FFL can work as a AND gate or OR gate. AND gate example (Arabinose system)</p>
+<p><img src="../assets/notion/Screenshot_2025-01-04_at_3.02.42_AM.png" alt="Screenshot 2025-01-04 at 3.02.42 AM.png"></p>
+<h2><strong>I1-FFL</strong></h2>
+<p>The I1-FFL is a pulse generator and response accelerator</p>
+<p><img src="../assets/notion/Screenshot_2025-03-07_at_5.48.13_PM.png" alt="Screenshot 2025-03-07 at 5.48.13 PM.png"></p>
+<p><strong>Application</strong>: Fold Change detection ****</p>
+<p>Fold change detection is a phenomenon in which a system&#39;s repsonse to an input
+depends on its relative change against a background, rather than the absolute magnitude of that input. it is widely observed biological phenomena.  For instance, E. coli move toward an attractive chemical stimulus by sensing the relative change of its concentration against the background. Similarly, the smallest change in brightness that the human visual system can
+detect increases with the ambient light level, a result known as the Weber-Fechner
+law. </p>
+<p><img src="../assets/notion/Screenshot_2025-05-07_at_9.06.42_PM.png" alt="Screenshot 2025-05-07 at 9.06.42 PM.png"></p>
+<p>Equation for the system:</p>
+<p><img src="../assets/notion/Screenshot_2025-05-07_at_9.08.42_PM.png" alt="Screenshot 2025-05-07 at 9.08.42 PM.png"></p>
+<p>Assume X binds weakly and Y binds strongly to their respective binding sites. Nondimensionalize the equations to get:</p>
+<div class="math-block">$$
+\frac{dy}{dt}=-y+x\\ r\frac{dz}{dt}=-z+\frac{x}{y}\\
+$$</div>
+<p>where $r=\alpha_1/\alpha_2$, which is a ratio of the half-lives of Y and Z. Also, $x=X/X_0$.</p>
+<p><img src="../assets/notion/Screenshot_2025-05-07_at_9.31.12_PM.png" alt="Screenshot 2025-05-07 at 9.31.12 PM.png"></p>
+<h2>4 node motifs:</h2>
+<p><img src="../assets/notion/Screenshot_2025-01-04_at_3.21.54_AM.png" alt="Screenshot 2025-01-04 at 3.21.54 AM.png"></p>
+<p><strong>Multi-output FFLs</strong></p>
+<p><strong>Single input module (SIM):</strong> SIM can generate temporal order</p>
+<p><img src="../assets/notion/Screenshot_2025-03-07_at_5.50.41_PM.png" alt="Screenshot 2025-03-07 at 5.50.41 PM.png"></p>
+<p><strong>Dense overlapping regulons (DOR) or multi-input motifs (MIMs):</strong></p>
+<p><img src="../assets/notion/Screenshot_2025-03-07_at_6.03.03_PM.png" alt="Screenshot 2025-03-07 at 6.03.03 PM.png"></p>
+<h2>Network motifs in developmental networks</h2>
+<p>Developmental transcription networks use all the network motifs described above. In addition, as a result of their specific requirements, developmental networks use several other network motifs that are not commonly found in sensory networks.</p>
+<p><img src="../assets/notion/Screenshot_2025-03-07_at_6.17.25_PM.png" alt="Screenshot 2025-03-07 at 6.17.25 PM.png"></p>
+<h2>Repressilator</h2>
+<p>It is an artificial genetic circuit made of three repressors: <em>lacI, tetR,</em> and <em>$\lambda$ cl</em>.</p>
+<p>Three repressors regulate each other in a cycle: X represses Y, Y represses Z and Z represses X. Z also represses a green-fluorescent protein (GFP) gene which is a readout of the circuit.</p>
+<p><strong>Convention</strong>: Italicize the name when referring to the gene / mRNA and capitalize it when referring to the gene product / protein.</p>
+<p><img src="../assets/notion/transcription-regulatory-networks-image.png" alt="image.png"></p>
+
+
+  </main>
+</body>
+</html>
