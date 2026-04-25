@@ -16,6 +16,10 @@ Education
 
 Work experience
 ======
+* Founder
+  * Socratic Academy
+  * Research-driven education platform
+
 * Summer 2015: Research Assistant
   * Harish Chandra Research Institute
   * Research: Quantum Computation and Information
