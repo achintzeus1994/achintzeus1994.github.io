@@ -1,0 +1,225 @@
+/* ==========================================================================
+   Profile polish
+   ========================================================================== */
+
+$profile-ink: #1f2933;
+$profile-muted: #5f6c7b;
+$profile-teal: #167a80;
+$profile-gold: #c9822b;
+$profile-surface: #f7faf9;
+
+body {
+  color: $profile-ink;
+}
+
+.masthead {
+  background: rgba(#fff, 0.96);
+  border-bottom-color: mix(#fff, $profile-teal, 78%);
+
+  &__inner-wrap {
+    padding-top: 0.85em;
+    padding-bottom: 0.85em;
+  }
+}
+
+.masthead__menu-item--lg {
+  color: $profile-ink;
+}
+
+.greedy-nav a {
+  color: $profile-ink;
+
+  &:hover {
+    color: $profile-teal;
+  }
+}
+
+.page__title {
+  color: $profile-ink;
+}
+
+.page__content {
+  color: $profile-ink;
+
+  p, li {
+    line-height: 1.7;
+  }
+
+  h2 {
+    margin-top: 1.8em;
+    color: $profile-ink;
+    border-bottom-color: mix(#fff, $profile-teal, 75%);
+  }
+
+  a {
+    color: $profile-teal;
+    text-decoration-color: rgba($profile-teal, 0.35);
+    text-underline-offset: 0.16em;
+
+    &:hover {
+      color: mix(#000, $profile-teal, 20%);
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 0 0 2.5rem;
+  padding: 2.4rem 0 2rem;
+  border-bottom: 1px solid mix(#fff, $profile-teal, 80%);
+
+  @include breakpoint($medium) {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.42fr);
+    padding-top: 3.25rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.home-hero__eyebrow {
+  margin-bottom: 0.8rem;
+  color: $profile-teal;
+  font-size: $type-size-6;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.home-hero h1 {
+  margin: 0 0 1rem;
+  color: $profile-ink;
+  font-size: 2.4rem;
+  line-height: 1.05;
+
+  @include breakpoint($medium) {
+    font-size: 3.2rem;
+  }
+}
+
+.home-hero__lead {
+  max-width: 46rem;
+  color: $profile-muted;
+  font-size: $type-size-4;
+  line-height: 1.55;
+}
+
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.4rem;
+}
+
+.home-hero__media {
+  justify-self: start;
+
+  @include breakpoint($medium) {
+    justify-self: end;
+  }
+
+  img {
+    display: block;
+    width: min(70vw, 270px);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 1px solid mix(#fff, $profile-teal, 72%);
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba($profile-ink, 0.14);
+  }
+}
+
+.profile-summary {
+  max-width: 52rem;
+  margin-bottom: 2.4rem;
+  padding: 1.35rem 1.5rem;
+  background: linear-gradient(135deg, $profile-surface, #fff 70%);
+  border-left: 4px solid $profile-gold;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.home-section {
+  margin-top: 2.2rem;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  article {
+    min-height: 12rem;
+    padding: 1.2rem;
+    background: #fff;
+    border: 1px solid mix(#fff, $profile-muted, 78%);
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba($profile-ink, 0.06);
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.55rem;
+    color: $profile-ink;
+    font-size: $type-size-5;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: $profile-muted;
+    font-size: 0.95rem;
+  }
+}
+
+.selected-work {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+
+  @include breakpoint($small) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    min-height: 4.25rem;
+    padding: 1rem 1.1rem;
+    color: $profile-ink;
+    font-weight: 700;
+    text-decoration: none;
+    background: mix(#fff, $profile-surface, 42%);
+    border: 1px solid mix(#fff, $profile-teal, 78%);
+    border-radius: 8px;
+
+    &:hover {
+      color: #fff;
+      background: $profile-teal;
+      border-color: $profile-teal;
+    }
+  }
+}
+
+.btn--primary {
+  background-color: $profile-teal;
+
+  &:hover {
+    background-color: mix(#000, $profile-teal, 18%);
+  }
+}
+
+.author__avatar img {
+  border-radius: 8px;
+}
+
+.author__bio {
+  color: $profile-muted;
+}

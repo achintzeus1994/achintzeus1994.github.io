@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Achint Kumar"
 title_separator          : "-"
 name                     : &name "Achint Kumar"
-description              : &description "Deep Learning Data Scientist II"
+description              : &description "Founder, Socratic Academy | AI, physics, and research-driven education"
 url                      : https://achintzeus1994.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "achintzeus1994/achintzeus1994.github.io"
@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Achint Kumar"
   avatar           : "achint"
-  bio              : "Deep Learning Data Scientist"
-  location         : "San Diego, CA"
-  employer         :
+  bio              : "Founder, Socratic Academy"
+  location         : "Santa Clara, CA"
+  employer         : "Socratic Academy"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=KX7Q_mwAAAAJ"
   email            :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "achint-kumar-b1810670"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
