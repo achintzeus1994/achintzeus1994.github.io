@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantizing QED</title>
+  <style>
+    :root { color-scheme: light; --ink: #1f2933; --muted: #5f6c7b; --rule: #d9e2ec; --accent: #167a80; --surface: #f7faf9; }
+    body { margin: 0; color: var(--ink); background: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.68; }
+    .site-header { border-bottom: 1px solid var(--rule); background: rgba(255, 255, 255, 0.96); }
+    .site-nav { max-width: 1120px; margin: 0 auto; padding: 14px 22px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .site-title { margin-right: auto; color: var(--ink); font-weight: 700; text-decoration: none; }
+    .site-nav a { color: var(--ink); font-size: 0.95rem; text-decoration: none; }
+    .site-nav a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 0.18em; }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 22px 72px; }
+    h1, h2, h3 { line-height: 1.2; letter-spacing: 0; }
+    h1 { margin: 0 0 1.4rem; font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { margin-top: 2.4rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--rule); color: var(--accent); }
+    h3 { margin-top: 1.8rem; color: var(--ink); }
+    p, li { font-size: 1.02rem; }
+    li { margin: 0.35rem 0; }
+    img { display: block; max-width: 100%; height: auto; margin: 1.5rem auto; border-radius: 8px; border: 1px solid var(--rule); background: var(--surface); }
+    table { width: 100%; margin: 1.5rem 0; border-collapse: collapse; overflow-x: auto; display: block; }
+    th, td { padding: 0.7rem 0.85rem; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+    th { background: var(--surface); }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    .math-block { overflow-x: auto; margin: 1.25rem 0; padding: 0.85rem 1rem; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 6px; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    blockquote { margin-left: 0; padding-left: 1rem; color: var(--muted); border-left: 3px solid var(--rule); }
+    a { color: var(--accent); }
+  </style>
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true } });</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-title" href="/">Achint Kumar</a>
+      <a href="/publications/">Publications</a>
+      <a href="/talks/">Talks</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/year-archive/">Notes</a>
+      <a href="/cv/">CV</a>
+    </nav>
+  </header>
+  <main>
+<h1>Quantizing QED</h1>
+<p>The goal is to make sense of the photon path integral</p>
+<div class="math-block">$$
+\mathcal{Z}= \int [dA]e^{iS[A]}.
+$$</div>
+<p>For free QED, or equivalently the Maxwell field without charged matter,</p>
+<div class="math-block">$$
+\mathcal{Z}=\int [dA]\exp\left[i\int d^4x\left(-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\right)\right].
+$$</div>
+<p>After integrating by parts and dropping boundary terms, the action can be written as a quadratic form:</p>
+<div class="math-block">$$
+S=\int d^4x\,\mathcal{L}
+=\frac{1}{2}\int d^4x\,A_{\mu}
+\left(\partial ^2\eta^{\mu\nu}-\partial ^{\mu}\partial^{\nu}\right)A_{\nu}.
+$$</div>
+<p>Define the kinetic operator</p>
+<div class="math-block">$$
+\mathcal{O}^{\mu\nu}=\partial ^2\eta^{\mu\nu}-\partial ^{\mu}\partial^{\nu}.
+$$</div>
+<p>To compute correlation functions, we need the photon Green's function:</p>
+<div class="math-block">$$
+\mathcal{O}^{\mu\nu}D_{\nu\rho}^F(x,y)=i\delta_{\rho}^{\mu}\delta^{4}(x-y).
+$$</div>
+<p>But there is a problem: no inverse exists yet. The operator has zero modes because the Maxwell action is gauge invariant under</p>
+<div class="math-block">$$
+A_\mu(x)\to A_\mu^\lambda(x)=A_\mu(x)+\partial_\mu\lambda(x).
+$$</div>
+<p>In momentum space,</p>
+<div class="math-block">$$
+\partial ^2\eta^{\mu\nu}-\partial ^{\mu}\partial^{\nu}
+\longrightarrow p^2 \eta^{\mu \nu}-p^{\mu}p^{\nu}.
+$$</div>
+<p>Acting on a pure-gauge direction $p_\mu\alpha(p)$ gives</p>
+<div class="math-block">$$
+(p^2 \eta^{\mu \nu}-p^{\mu}p^{\nu})p_{\mu}\alpha(p)
+=(p^2p^{\nu}-p^2p^{\nu})\alpha(p)=0.
+$$</div>
+<p>So the path integral is trying to integrate over infinitely many physically identical configurations. The Faddeev-Popov procedure is the clean way to divide out this gauge redundancy.</p>
+<h2>Faddeev-Popov Procedure</h2>
+<h3>1. Delta Functional Warm-Up</h3>
+<p>For an ordinary variable, if $y=y(x)$ has a simple zero, then</p>
+<div class="math-block">$$
+1=\int dy\,\delta(y)=\int dx\,\delta(y(x))\left|\frac{dy}{dx}\right|.
+$$</div>
+<p>The functional version is the same idea:</p>
+<div class="math-block">$$
+1=\int [d\lambda]\,
+\delta[G(A^\lambda)]
+\det\left(\frac{\delta G(A^\lambda)}{\delta\lambda}\right).
+$$</div>
+<p>Here $G(A)=0$ is the gauge condition. For Lorenz gauge,</p>
+<div class="math-block">$$
+G(A)=\partial_\mu A^\mu.
+$$</div>
+<p>The determinant is the Jacobian for changing variables from the gauge parameter $\lambda$ to the gauge-fixing function $G(A^\lambda)$. It counts how the gauge slice cuts through each gauge orbit.</p>
+<h3>2. Insert the Identity</h3>
+<p>Start with the gauge-redundant partition function:</p>
+<div class="math-block">$$
+\mathcal{Z}=\int[dA]\,e^{iS[A]}.
+$$</div>
+<p>Insert the Faddeev-Popov identity:</p>
+<div class="math-block">$$
+\mathcal{Z}
+=\int[dA][d\lambda]\,
+\delta[G(A^\lambda)]
+\det\left(\frac{\delta G(A^\lambda)}{\delta\lambda}\right)
+e^{iS[A]}.
+$$</div>
+<p>Since the Maxwell action and the path-integral measure are gauge invariant,</p>
+<div class="math-block">$$
+S[A^\lambda]=S[A],
+\qquad
+[dA^\lambda]=[dA].
+$$</div>
+<p>The integral over $[d\lambda]$ is just the volume of the gauge group. It is infinite, but it is also an overall constant, so it is removed from normalized correlation functions. What remains is the gauge-fixed path integral:</p>
+<div class="math-block">$$
+\mathcal{Z}
+=\int[dA]\,
+\delta[G(A)]
+\det\left(\frac{\delta G(A^\lambda)}{\delta\lambda}\right)
+e^{iS[A]}.
+$$</div>
+<h3>3. Evaluate the Determinant for QED</h3>
+<p>For QED,</p>
+<div class="math-block">$$
+A_\mu^\lambda=A_\mu+\partial_\mu\lambda.
+$$</div>
+<p>Therefore</p>
+<div class="math-block">$$
+G(A^\lambda)
+=\partial_\mu A^{\lambda\mu}
+=\partial_\mu A^\mu+\partial^2\lambda.
+$$</div>
+<p>Taking the functional derivative gives</p>
+<div class="math-block">$$
+\frac{\delta G(A^\lambda)(x)}{\delta\lambda(y)}
+=\partial_x^2\delta^4(x-y).
+$$</div>
+<p>So the Faddeev-Popov determinant is</p>
+<div class="math-block">$$
+\Delta_{FP}[A]
+=\det(\partial^2).
+$$</div>
+<p>The important simplification is that this determinant is independent of $A_\mu$. In abelian QED, the ghosts decouple. If we introduce ghost fields anyway,</p>
+<div class="math-block">$$
+\det(\partial^2)=\int[d\bar{c}][dc]\,
+\exp\left(i\int d^4x\,\bar{c}\,\partial^2c\right),
+$$</div>
+<p>they are free fields with no photon interaction. This is very different from non-abelian Yang-Mills theory, where the determinant depends on $A_\mu$ and ghosts interact.</p>
+<h3>4. Replace the Sharp Gauge Slice by a Gaussian Average</h3>
+<p>The delta function imposes the exact Lorenz gauge condition $\partial_\mu A^\mu=0$. More generally, choose</p>
+<div class="math-block">$$
+G(A)=\partial_\mu A^\mu-f(x),
+$$</div>
+<p>and average over the arbitrary function $f(x)$ with a Gaussian weight:</p>
+<div class="math-block">$$
+\int[df]\,
+\exp\left[-\frac{i}{2\xi}\int d^4x\,f(x)^2\right].
+$$</div>
+<p>Because the result is independent of the particular gauge slice, this averaging only changes the normalization. Using the delta functional to set $f=\partial_\mu A^\mu$ gives the covariant gauge-fixed partition function:</p>
+<div class="math-block">$$
+\mathcal{Z}
+=\int[dA]\,\det(\partial^2)\,
+\exp\left(i\int d^4x\,\mathcal{L}_{FP}\right).
+$$</div>
+<p>The gauge-fixed Lagrangian is</p>
+<div class="math-block">$$
+\mathcal{L}_{FP}
+=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+-\frac{1}{2\xi}(\partial_\mu A^{\mu})^2.
+$$</div>
+<p>Here $\xi$ is the gauge parameter. Different $\xi$ values change the propagator, but not gauge-invariant observables.</p>
+<h2>The Gauge-Fixed Photon Propagator</h2>
+<p>The quadratic action is now invertible. The kinetic operator becomes</p>
+<div class="math-block">$$
+\mathcal{O}^{\mu\nu}_\xi
+=\partial ^2\eta^{\mu\nu}
+-\left(1-\frac{1}{\xi}\right)\partial ^{\mu}\partial^{\nu}.
+$$</div>
+<p>In momentum space, using the usual $i\epsilon$ prescription, the Feynman propagator is</p>
+<div class="math-block">$$
+D_{\mu\nu}^F(p)
+=\frac{-i}{p^2+i\epsilon}
+\left[
+\eta_{\mu\nu}
+-(1-\xi)\frac{p_\mu p_\nu}{p^2+i\epsilon}
+\right].
+$$</div>
+<p>Two common choices are:</p>
+<ul>
+<li>Feynman gauge: $\xi=1$, so</li>
+</ul>
+<div class="math-block">$$
+D_{\mu\nu}^F(p)=\frac{-i\eta_{\mu\nu}}{p^2+i\epsilon}.
+$$</div>
+<ul>
+<li>Landau gauge: $\xi\to 0$, so the propagator is transverse:</li>
+</ul>
+<div class="math-block">$$
+p^\mu D_{\mu\nu}^F(p)=0.
+$$</div>
+<h2>Intuition</h2>
+<p>The original photon kinetic operator fails because it tries to invert directions that are not physical: pure gauge fluctuations. The Faddeev-Popov trick inserts a clever form of $1$ into the path integral, picks one representative per gauge orbit, and supplies the correct Jacobian. For QED that Jacobian is field independent, so ghosts are harmless spectators. The payoff is the gauge-fixed propagator, which is what we need for perturbation theory.</p>
+  </main>
+</body>
+</html>
