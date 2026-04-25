@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aging</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #5f6c7b;
+      --rule: #d9e2ec;
+      --accent: #167a80;
+      --surface: #f7faf9;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.68;
+    }
+    .site-header {
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 255, 255, 0.96);
+    }
+    .site-nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .site-title {
+      margin-right: auto;
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .site-nav a {
+      color: var(--ink);
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .site-nav a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 0.18em;
+    }
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 22px 72px;
+    }
+    h1, h2, h3 {
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 1.4rem;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+    h2 {
+      margin-top: 2.4rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--rule);
+      color: var(--accent);
+    }
+    p, li {
+      font-size: 1.02rem;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem auto;
+      border-radius: 8px;
+      border: 1px solid var(--rule);
+      background: var(--surface);
+    }
+    .math-block {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      padding: 0.85rem 1rem;
+      background: var(--surface);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+    }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+    blockquote {
+      margin-left: 0;
+      padding-left: 1rem;
+      color: var(--muted);
+      border-left: 3px solid var(--rule);
+    }
+    a {
+      color: var(--accent);
+    }
+  </style>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-title" href="/">Achint Kumar</a>
+      <a href="/publications/">Publications</a>
+      <a href="/talks/">Talks</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/year-archive/">Notes</a>
+      <a href="/cv/">CV</a>
+    </nav>
+  </header>
+  <main>
+<h1>Aging</h1>
+<p><strong>Allometric Laws:</strong></p>
+<p>Lifespan (not accurate): Exceptions: bats, naked mole rat, etc</p>
+<div class="math-block">$$
+L \propto M^{1/4}
+$$</div>
+<p>Kleiber’s Law: power consumption:</p>
+<div class="math-block">$$
+W\propto M^{3/4}
+$$</div>
+<p>Rate of living theory: Lifespan is inversely related to its metabolic rate. Candle that burns brightest burns fastest.</p>
+<div class="math-block">$$
+\frac{L}{M}\propto M^{-1/4}\propto W^{-1/3}
+$$</div>
+<p>Heart rate:</p>
+<div class="math-block">$$
+HR\propto M^{-1/4}
+$$</div>
+<p>Total heart beats in lifespan is same:</p>
+<div class="math-block">$$
+T=HR\times L=M^{-1/4}M^{1/4}=c\approx 3\times 10^9
+$$</div>
+<p><strong>Evolutionary Theory of Trade-Offs:</strong></p>
+<p>Recent data on Longevity versus mass (2D):</p>
+<p><img src="../assets/notion/Screenshot_2025-02-17_at_4.13.54_PM.png" alt="Screenshot 2025-02-17 at 4.13.54 PM.png"></p>
+<p>Pareto Task Inference:</p>
+<p>3 life strategies/archetypes:</p>
+<ul>
+<li><strong>Live fast die young strategy (S)</strong>: eg: shrew and mice</li>
+<li><strong>Slow life strategy (W)</strong>: big size, low predation. eg: elephants and whales</li>
+<li><strong>Protected niche strategy (B)</strong>: flying, being underground, cognition, living on trees allows them to face less predation. eg: bats, naked mole rate, primates, squirrels</li>
+</ul>
+<p>4th possible archetype: ratio of adult/birth weight. eg: bears. bear cubs weigh: 200g but adults weigh: 300kg</p>
+<p>Recent data on Longevity versus mass and ratio of adult/birth weight(3D):</p>
+<p><img src="../assets/notion/Screenshot_2025-02-17_at_7.41.14_PM.png" alt="Screenshot 2025-02-17 at 7.41.14 PM.png"></p>
+<p>Other examples:</p>
+<p><img src="../assets/notion/Screenshot_2025-02-17_at_7.32.28_PM.png" alt="Screenshot 2025-02-17 at 7.32.28 PM.png"></p>
+<p>All in all, bigger species tend to live longer. But within a species, there is an opposite trend - bigger individuals are shorter lived than smaller ones</p>
+<p><strong>Peto paradox:</strong> how can very large mammals avoid cancer? The large animals have so many cells and cell divisions that cancer seems unavoidable. Reduced mutations reduce cancer. Long lived animals have other anticancer features: Elephants have duplication of p53, a major tumor suppressor gene. Naked mole rats have hyaluronic acid that enhances contact inhibition and are tuned to strong apoptosis (huge wound then healing) after toxic drug exposure on the skin that would give mice cancer. The accuracy of making proteins also rises in long lived animals compared to short lived ones.</p>
+<hr>
+<hr>
+<hr>
+<p>“Treating the major risk factor, aging itself, rather than treating one disease at a time can be a turning point in medicine.”</p>
+<p><img src="../assets/notion/Screenshot_2025-02-14_at_1.00.52_AM.png" alt="Screenshot 2025-02-14 at 1.00.52 AM.png"></p>
+<h2>Hallmarks of aging:</h2>
+<p>DNA Hallmarks:</p>
+<ol>
+<li><strong>Genome instability:</strong> Double strand breaks, mutations-repair can’t happen (Werner and Bloom Syndrome)</li>
+<li><strong>Telomere attrition:</strong> Shortening of telomere with each cell division-anti-cancer mechanism  (Hayflick limit: 60), DNA damage in telomere accumulate in non-dividing cells as they cannot be repaired because of protective covering. Stem cells telomere is replenished by enzymes.</li>
+<li><strong>Epigenetic alteration:</strong> Caused by histone acetylation, DNA methylation</li>
+</ol>
+<p>Protein Hallmarks:</p>
+<ol>
+<li><strong>Loss of proteostasis</strong>: Protein aggregates increase with age. The repair mechanism: chaperones to refold the protein, protease to degrade them, autophagy to recycle them gets overwhelmed</li>
+<li><strong>Deregulated nutrient sensing:</strong> mTOR: sensor that controls growth or repair. input: nutrients. output: rate of production of protein or expression of recycling machines. Rapamycin is mTOR inhibitor, it increases recycling and extend lifespan. TOR: Target for Rapamycin. Rapamycin allows us to mimic caloric restriction. AMPK is energy sensor activated during lower nutrient availability. Metformin is AMPK activator.</li>
+</ol>
+<p>Mitochondria Hallmarks:</p>
+<ol>
+<li><strong>Mitochondrial dysfunction:</strong> Oxidative stress, mtDNA mutations, decreased mitochondrial biogenesis, impaired mitophagy. Immune cells can start attacking thinking its bacteria.</li>
+<li><strong>Disabled macroautophagy:</strong> Degradation and replacement of damaged organelles</li>
+</ol>
+<p>Cell Hallmarks:</p>
+<ol>
+<li><p><strong>Senescent cells</strong></p>
+<p> <img src="../assets/notion/Screenshot_2025-02-14_at_5.39.58_PM.png" alt="Screenshot 2025-02-14 at 5.39.58 PM.png"></p>
+</li>
+</ol>
+<p>Organ Hallmarks:</p>
+<ol>
+<li><strong>Chronic inflammation:</strong> Caused by senescent cells</li>
+<li><strong>Stem cell exhaustion</strong>: Senescent cell SASP causes stem cells to divide less</li>
+<li><strong>Altered intercellular communication:</strong> Due to inflammation</li>
+<li><strong>Dysbiosis</strong>: Increased leakage of bacteria from gut into circulation</li>
+</ol>
+<h2>Strategies for intrinsic immortality:</h2>
+<ul>
+<li><strong>Regeneration</strong>:</li>
+</ul>
+<p><strong>Planarians and Hydra</strong>:</p>
+<ol>
+<li>Regenerative Capacity: Planarians have an extraordinary ability to regenerate lost body parts, including their brain, gut, and tail. This is powered by pluripotent stem cells that can differentiate into any cell type needed for regeneration.</li>
+<li>Telomere Maintenance: Unlike most animals, planarians can maintain the length of their telomeres, which are protective caps at the ends of chromosomes. This prevents cellular aging and allows their cells to continue dividing indefinitely.</li>
+<li>Stem Cell Activity: Planarians have a high number of active stem cells that continuously replace aged or damaged cells. This constant renewal helps them avoid the typical signs of aging seen in other organisms.</li>
+</ol>
+<ul>
+<li><strong>Return to embryonic stage</strong>:</li>
+</ul>
+<p><strong>Immortal Jellyfish</strong>:</p>
+<p>The immortal jellyfish, <em>Turritopsis dohrnii</em>, a 5mm marine animal, has a unique ability to reverse its life cycle. This process is called transdifferentiation, where the jellyfish can transform its cells from a mature form back into an earlier stage of its life cycle.</p>
+<p><img src="../assets/notion/Screenshot_2025-02-17_at_12.01.52_AM.png" alt="Screenshot 2025-02-17 at 12.01.52 AM.png"></p>
+<ul>
+<li><strong>Compartmentalization of damaged cells:</strong></li>
+</ul>
+<p><strong>Trees</strong>:</p>
+<p>Compartmentalization: Trees have a unique ability to compartmentalize damaged or diseased areas. They can isolate and seal off affected parts, preventing the spread of infections or decay.</p>
+<ul>
+<li><strong>Symmetric division:</strong></li>
+</ul>
+<p><em><strong>E. coli:</strong></em></p>
+<p><a href="https://www.notion.so/Saturating-Removal-Model-238d76b95ec280b992c9e8fe3d5d5777?pvs=21">Saturating Removal Model</a></p>
+<h1>Part 1: Compressing Morbidity</h1>
+<ul>
+<li>Preventing glucose spikes</li>
+<li>Senolytics</li>
+<li>Non-feminizing estradiol</li>
+</ul>
+<h1>Part 2: Extending Maximal Lifespan</h1>
+<h2>Epigenetic Reprogramming</h2>
+<p>“A forty year old egg and a forty year old sperm fuse to create a zero year old baby! Wow.”</p>
+<p>Sperm and egg erase their aging-related changes to through a process called epigenetic
+reprogramming. This ensures that the offspring start with a &quot;clean slate&quot; and are not burdened
+with the accumulated epigenetic marks of aging from their parents.</p>
+<p>Epigenetic changes are of 2 types:</p>
+<ul>
+<li><strong>DNA methylation:</strong> In addition to the 4 base pairs, DNA comes with extra tags that serve as  signals for whether a gene should be kept on or off over the longer term. The most common of these is the addition of methyl $(-CH_3)$ group to cytosine. When C’s at the right place are methylated in this way, the genes ahead of them are kept switched off. A <strong>methylome</strong> is the collection of methylated cytosines in a genome.</li>
+<li><strong>Histone acetylation</strong>: Tags (acetyl group) on histones. Unlike DNA methylation which silences the gene, histone acetylation signals the gene is to be actively transcribed.</li>
+</ul>
+<p>In sperm, the process of reprogramming is dramatic. During sperm development, most of the
+histones are replaced with proteins called protamines. Protamines are positively charged and
+tightly pack the negative DNA into the compact head of the sperm. Because histones are
+largely removed, any aging-related modifications, including acetylation marks, are also erased.
+This ensures that the sperm carries only the essential genetic material to the egg, free of most
+of the epigenetic baggage accumulated during the parent&#39;s lifetime.</p>
+<p>However, a small percentage of histones remain in the sperm, particularly in regions of DNA
+that are critical for embryo development. These remaining histones undergo careful
+reprogramming, with enzymes called histone deacetylases (HDACs) playing a major role in
+removing inappropriate acetylation marks.</p>
+<p>In eggs, the process is different because most histones are retained instead of being replaced.
+During egg maturation, a complex system of enzymes called histone acetyltransferases
+(HATs) and HDACs work to reconfigure the histone acetylation landscape. Old histones are
+often replaced with newly synthesized ones, ensuring the DNA is packaged in a way that
+supports healthy embryo development. This remodeling of histones and their acetylation marks
+prepares the egg for fertilization and the significant changes that occur in early embryonic
+development.</p>
+<p>Even after fertilization, the embryo undergoes reprogramming of the histones. </p>
+<p>DNA methylation can be used to figure out biological age (in research phase).</p>
+<h2>Partial Reprogramming: Lowering a</h2>
+<p>Return adult cells to an embryonic stage without losing cell identity or causing cancer. It relies on short term activation of specific genes that reverse signs of cellular aging. It relies on activation of four genes which encode transcription factors called Yamanaka factors—OCT4, SOX2, KLF4, and c-MYC (OSKM)—originally discovered as a way to turn adult cells into embryonic-like stem cells (both gene and TF share the same names).</p>
+<p><strong>Unknowns</strong>:</p>
+<p>How to determine the exact duration of activation? </p>
+<p>What is the right amount of activation for the different factors in different cells?</p>
+<p>Induced pluripotent stem cells (iPSCs) are created by the reprogramming of somatic cells via overexpression of Yamanaka factors: Oct4, Sox2, Klf4, and c-Myc (OSKM). </p>
+<p><strong>Waddington Landscape</strong>: Peak is pluripotent stem cell. It has maximum differentiation potential. The differentiated cells are the valleys in this landscape.</p>
+<p><img src="../assets/notion/image.png" alt="image.png"></p>
+<h2>Senolytics: Increasing b</h2>
+<p>Senolytics are drugs which specifically remove senescent cells.</p>
+<p>Companies: </p>
+<ol>
+<li>Unity Biotechnology: Backing by Peter Thiel and Yuri Milner</li>
+<li>Calico Labs (2013): Backing by Google</li>
+<li>Altos Labs (2021): Backing by Jeff Bezos</li>
+<li>Hevolution Fund: Saudi Arabia, $1B/yr</li>
+</ol>
+<p>Currently ~$10B/yr spending on longevity research</p>
+<h2>Elephant of Heath:</h2>
+<p>4 legs:</p>
+<ul>
+<li><p>Nutrition</p>
+</li>
+<li><p>Exercise</p>
+</li>
+<li><p>Sleep</p>
+</li>
+<li><p>Emotional Wellbeing</p>
+<p>  <img src="../assets/notion/Screenshot_2025-02-13_at_5.38.07_PM.png" alt="Screenshot 2025-02-13 at 5.38.07 PM.png"></p>
+</li>
+</ul>
+<h2>4 Horsemen of age related diseases:</h2>
+<ul>
+<li><strong>Cancer</strong></li>
+<li><strong>Diabetes</strong></li>
+<li><strong>Cardiovascular disease</strong></li>
+<li><strong>Neurodegenerative disease:</strong> Alzheimer’s disease, Parkinson’s disease</li>
+</ul>
+<p>There’s also failure and fibrosis of certain organs like kidney, lung and liver</p>
+<p>Other diseases: hearing loss, osteoporosis, cataract, etc</p>
+<p><img src="../assets/notion/Screenshot_2025-02-16_at_12.43.18_AM.png" alt="Screenshot 2025-02-16 at 12.43.18 AM.png"></p>
+<h2>Cancer</h2>
+<p>Cancer risk rises by 4000% between age 25 and 65. If the cancer cells manage to grow beyond a critical number of roughly 10^6 cells, they organize a local microenvironment that can prevent further immune clearance.</p>
+<p>A classic explanation for the age-dependence of cancer is called the <strong>multiple-hit hypothesis</strong>: the need for several mutations in the same cell to turn it into a cancer cell. Most cancers require a series of mutations, called oncogenic mutations, in order to knock-out pathways that prevent the cell from growing out of control. Such a multiple-hit process has a likelihood that rises roughly as the age to the power of the number of mutations. Cancer in the young often occurs because one of the mutations is already present in the germline and thus in all cells of the body.</p>
+<p>Multiple-hit hypothesis cannot explain:</p>
+<ol>
+<li>Why cancer incidence drops at very old age?</li>
+<li>Why cancers which require a single mutation, such as some leukemias, also have an exponentially rising incidence with age? Even colon cancer, the poster child for a multiple-mutation progression, has exponentially rising incidence with age rather than a power law.</li>
+<li>There are many cells with a full set of cancer driver mutations in healthy tissues that do not progress to cancer. For example sampling of colon crypts showed that  about 1% of crypt cells in healthy mid aged individuals have cancer mutations but they very rarely develop into colon cancer. Strikingly about 30% of skin cells have driver mutations for basal cell carcinoma.</li>
+</ol>
+<p>Think of many cancers as an AND-gate between chronic inflammation and oncogenic mutations.</p>
+<p><img src="../assets/notion/Screenshot_2025-02-16_at_1.02.45_AM.png" alt="Screenshot 2025-02-16 at 1.02.45 AM.png"></p>
+<h2>Alzheimer’s Disease</h2>
+<p>GWAS study results:</p>
+<ol>
+<li>Main gene involved is APOE. The APOE protein is the main lipid transporter in the brain. It comes in 3 variants: APOE 2, 3 an 4.</li>
+</ol>
+<ul>
+<li>APOE2 is protective for Alzheimer.</li>
+<li>APOE3 is risk neutral for Alzheimer. 70% of population</li>
+<li>APOE4 is a major risk factor for Alzheimer.</li>
+</ul>
+<p>Since we get one copy from each of our parent, there are 6 possible combination: APOE 3/3 is most common. APOE 4/4 is the worst. Risk factor increases by 10 times. Variants like APOE 3/3 is sometimes labeled as $\epsilon 3/\epsilon 3$. $\epsilon 4/\epsilon 4$ in NOT deterministic for Alzheimer but risk is very high. </p>
+<ol>
+<li>Second most important gene is TREM2. It makes receptor for glial cell (immune cell of brain). It works with APOE to clear amyloid beta plaques. APOE4 + TREM2 binds to plaques weakly and hence its not able to clear plaques.</li>
+</ol>
+<h2>Sleep</h2>
+<p>Sleep pressure: Adenosine. Accumulates during wakefulness and degrades during sleep. Caffeine blocks adenosine receptor. “Pressure may scream, but the brain doesn’t listen”</p>
+<p>Wake pressure: Cortisol + stimulants+ circadian rhythm</p>
+<p><img src="../assets/notion/Screenshot_2025-02-13_at_11.33.26_PM.png" alt="Screenshot 2025-02-13 at 11.33.26 PM.png"></p>
+<p><img src="../assets/notion/Screenshot_2025-02-13_at_11.37.59_PM.png" alt="Screenshot 2025-02-13 at 11.37.59 PM.png"></p>
+
+
+  </main>
+</body>
+</html>
