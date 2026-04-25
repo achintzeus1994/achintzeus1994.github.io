@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outlive - Chapter 14: Nutrition 3.0</title>
+  <style>
+    :root { color-scheme: light; --ink: #1f2933; --muted: #5f6c7b; --rule: #d9e2ec; --accent: #167a80; --surface: #f7faf9; }
+    body { margin: 0; color: var(--ink); background: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.68; }
+    .site-header { border-bottom: 1px solid var(--rule); background: rgba(255, 255, 255, 0.96); }
+    .site-nav { max-width: 1120px; margin: 0 auto; padding: 14px 22px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .site-title { margin-right: auto; color: var(--ink); font-weight: 700; text-decoration: none; }
+    .site-nav a { color: var(--ink); font-size: 0.95rem; text-decoration: none; }
+    .site-nav a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 0.18em; }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 22px 72px; }
+    h1, h2, h3 { line-height: 1.2; letter-spacing: 0; }
+    h1 { margin: 0 0 1.4rem; font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { margin-top: 2.4rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--rule); color: var(--accent); }
+    h3 { margin-top: 1.8rem; color: var(--ink); }
+    p, li { font-size: 1.02rem; }
+    li { margin: 0.35rem 0; }
+    img { display: block; max-width: 100%; height: auto; margin: 1.5rem auto; border-radius: 8px; border: 1px solid var(--rule); background: var(--surface); }
+    table { width: 100%; margin: 1.5rem 0; border-collapse: collapse; overflow-x: auto; display: block; }
+    th, td { padding: 0.7rem 0.85rem; border: 1px solid var(--rule); text-align: left; vertical-align: top; }
+    th { background: var(--surface); }
+    hr { border: 0; border-top: 1px solid var(--rule); margin: 2rem 0; }
+    .math-block { overflow-x: auto; margin: 1.25rem 0; padding: 0.85rem 1rem; background: var(--surface); border-left: 3px solid var(--accent); border-radius: 6px; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    blockquote { margin-left: 0; padding-left: 1rem; color: var(--muted); border-left: 3px solid var(--rule); }
+    a { color: var(--accent); }
+  </style>
+  <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true } });</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="site-title" href="/">Achint Kumar</a>
+      <a href="/publications/">Publications</a>
+      <a href="/talks/">Talks</a>
+      <a href="/teaching/">Teaching</a>
+      <a href="/year-archive/">Notes</a>
+      <a href="/cv/">CV</a>
+    </nav>
+  </header>
+  <main>
+<h1>Chapter 14: Nutrition 3.0</h1>
+<p>Rules for nutrition:</p>
+<ol>
+<li>Don’t eat too many calories, or too few.</li>
+<li>Consume sufficient protein, essential fats, vitamins and minerals.</li>
+<li>Avoid pathogens and toxins.</li>
+</ol>
+<p>Our knowledge of nutrition comes from two types of studies:</p>
+<ol>
+<li>Epidemiology: Find correlations between habits and outcomes in data collected from large groups of people.</li>
+<li>Clinical trials: One group eat diet X, another eats diet Y, and compare the results.</li>
+</ol>
+<p><strong>Epidemiology</strong></p>
+<p>Example 1: Cholera outbreak in London 1800s was due to contaminated water and it was figured out using epidemiological studies.</p>
+<p>Example 2: Increased rates of scrotal cancer in boys working as chimney sweeps in London was also figured out using epidemiological studies.</p>
+<p>Example 3;</p>
+<p>Problem: Epidemiology is unable to distinguish between correlation and causation.</p>
+<p>To determine the strength of epidemiological findings we use Bradford Hill criteria:</p>
+<ol>
+<li>Strength of the association (effect size)</li>
+<li>Reproducibility</li>
+<li>Specificity</li>
+<li>Temporality (does cause precede the effect?)</li>
+<li>Dose response (does the effect get stronger with higher dose?)</li>
+<li>Plausibility (does it make sense?)</li>
+<li>Coherence (does it agree with controlled animal experiments?)</li>
+<li>Experiment (is there any experimental evidence to back the findings?)</li>
+<li>Analogy (effect of similar factors may be considered)</li>
+</ol>
+<p>For nutritional epidemiological studies, Bradford Hill criteria fails.</p>
+<p>Example: Red meat and processed meat causes colorectal cancer. Hazard Ratio: 1.17 (17% increased risk). This is weak association.</p>
+<p>Example: Smoking is associated with 1000%-2500% increase in risk of lung cancer.</p>
+<p>David Allison’s experiment: He split genetically identical mice, housed in identical conditions into 3 groups:</p>
+<ol>
+<li>High calorie (Ad libitum) group</li>
+<li>Intermediate calorie group</li>
+<li>Low calorie group</li>
+</ol>
+<p>Result: low calorie group lived longest, followed by intermediate calorie group and the high calorie group lived the shortest, on average.</p>
+<p>Then, he looked at high calorie group and analyzed this group separately. Within this group he found that on average mice which ate more lived longer than mice that ate less. This is exactly opposite of the result found in the larger, more reliable group.</p>
+<p>This is example of healthy user bias (a confounder): appetite reflected baseline health, not the effect of calories themselves. In high calorie group, <strong>the mice who ate more did live longer than the mice who ate less</strong>, but this was <strong>not causal</strong>. It was due to baseline differences, not the calories themselves.</p>
+<p><strong>Clinical trials</strong></p>
+<p>PREDIMED study: 3 groups were given gifts:</p>
+<ol>
+<li>Group 1: 1 liter of olive oil/week</li>
+<li>Group 2: Some nuts/week</li>
+<li>Group 3: Simply instructed to eat low-fat diet, no nuts, no fish, etc</li>
+</ol>
+<p>Study was supposed to last 6 years but stopped in 4.5 years because the results were dramatic:</p>
+<p>Group receiving olive oil had 31% lower risk of stroke, heart attack, and death than the low-fat group. Similarly group 2 (receiving nuts), showed a 28% reduced risk.</p>
+<p>Nuts and olive oil “Mediterranean diet” appeared to be as powerful as statins, in terms of of numbers needed to treat (NNT) for primary prevention of heart disease. In secondary prevention, statins tend to show a somewhat lower NNT.</p>
+  </main>
+</body>
+</html>
