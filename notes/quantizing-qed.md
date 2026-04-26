@@ -45,12 +45,39 @@ $$
 \longrightarrow p^2 \eta^{\mu \nu}-p^{\mu}p^{\nu}.
 $$
 
-Acting on a pure-gauge direction $p_\mu\alpha(p)$ gives
+A "pure-gauge direction" means a change in $A_\mu$ that only moves us along a gauge orbit, not to a new physical field. In position space this direction is
+
+$$
+\delta A_\mu(x)=\partial_\mu\lambda(x).
+$$
+
+Fourier transform $\lambda(x)$ as
+
+$$
+\lambda(x)=\int\frac{d^4p}{(2\pi)^4}\lambda(p)e^{-ip\cdot x}.
+$$
+
+Then
+
+$$
+\partial_\mu\lambda(x)
+=\int\frac{d^4p}{(2\pi)^4}(-ip_\mu)\lambda(p)e^{-ip\cdot x}.
+$$
+
+Ignoring the conventional factor of $-i$, the gauge direction in momentum space is proportional to
+
+$$
+\delta A_\mu(p)\propto p_\mu\alpha(p),
+$$
+
+where $\alpha(p)$ is just the Fourier coefficient of the gauge parameter. So "acting on a pure-gauge direction" means applying the kinetic operator to this longitudinal vector. Explicitly,
 
 $$
 (p^2 \eta^{\mu \nu}-p^{\mu}p^{\nu})p_{\mu}\alpha(p)
 =(p^2p^{\nu}-p^2p^{\nu})\alpha(p)=0.
 $$
+
+This is the zero-mode problem in one line: the operator kills longitudinal vectors. Since a matrix/operator with nonzero vectors in its kernel cannot be inverted, the photon propagator is undefined until we fix gauge.
 
 So the path integral is trying to integrate over infinitely many physically identical configurations. The Faddeev-Popov procedure is the clean way to divide out this gauge redundancy.
 
@@ -72,10 +99,26 @@ $$
 \det\left(\frac{\delta G(A^\lambda)}{\delta\lambda}\right).
 $$
 
-Here $G(A)=0$ is the gauge condition. For Lorenz gauge,
+Here $G$ is a functional that takes a gauge field and returns the quantity we want to set to zero. The equation
+
+$$
+G(A)=0
+$$
+
+selects one representative from each gauge orbit. Geometrically, the set of all fields satisfying $G(A)=0$ is a "slice" through the space of gauge-equivalent fields.
+
+Why impose this? Because without it, the path integral includes every field $A_\mu$ and also every shifted field $A_\mu+\partial_\mu\lambda$, even though they describe the same electromagnetic field strength $F_{\mu\nu}$. Gauge fixing keeps one copy and removes the redundant copies.
+
+For Lorenz gauge,
 
 $$
 G(A)=\partial_\mu A^\mu.
+$$
+
+So $G(A)=0$ means
+
+$$
+\partial_\mu A^\mu=0.
 $$
 
 The determinant is the Jacobian for changing variables from the gauge parameter $\lambda$ to the gauge-fixing function $G(A^\lambda)$. It counts how the gauge slice cuts through each gauge orbit.
@@ -132,21 +175,72 @@ G(A^\lambda)
 =\partial_\mu A^\mu+\partial^2\lambda.
 $$
 
-Taking the functional derivative gives
+Now take the functional derivative with respect to $\lambda(y)$. The identity being used is
+
+$$
+\frac{\delta\lambda(x)}{\delta\lambda(y)}=\delta^4(x-y).
+$$
+
+Derivatives with respect to $x$ commute through the functional derivative:
+
+$$
+\frac{\delta\,\partial_\mu\lambda(x)}{\delta\lambda(y)}
+=\partial_\mu^x\delta^4(x-y),
+$$
+
+and therefore
+
+$$
+\frac{\delta\,\partial^2\lambda(x)}{\delta\lambda(y)}
+=\partial_x^2\delta^4(x-y).
+$$
+
+Applying this to $G(A^\lambda)(x)$ gives
 
 $$
 \frac{\delta G(A^\lambda)(x)}{\delta\lambda(y)}
 =\partial_x^2\delta^4(x-y).
 $$
 
-So the Faddeev-Popov determinant is
+The $\partial_\mu A^\mu$ term drops out because it does not depend on $\lambda$:
 
 $$
-\Delta_{FP}[A]
-=\det(\partial^2).
+\frac{\delta}{\delta\lambda(y)}\partial_\mu A^\mu(x)=0.
 $$
 
-The important simplification is that this determinant is independent of $A_\mu$. In abelian QED, the ghosts decouple. If we introduce ghost fields anyway,
+So the Faddeev-Popov operator is the kernel
+
+$$
+M(x,y)=\frac{\delta G(A^\lambda)(x)}{\delta\lambda(y)}
+=\partial_x^2\delta^4(x-y).
+$$
+
+The Faddeev-Popov determinant is the determinant of this operator:
+
+$$
+\Delta_{FP}[A]=\det M
+=\det\left[\partial_x^2\delta^4(x-y)\right].
+$$
+
+Because the delta function is the identity kernel for functional multiplication, this is usually written compactly as
+
+$$
+\Delta_{FP}[A]=\det(\partial^2).
+$$
+
+In momentum space, $\partial^2$ is diagonal:
+
+$$
+\partial^2 \longrightarrow -p^2.
+$$
+
+So formally,
+
+$$
+\det(\partial^2)=\prod_p(-p^2),
+$$
+
+up to the usual regulator and normalization choices. The important simplification is that this determinant contains no $A_\mu$. In abelian QED, the ghosts decouple. If we introduce ghost fields anyway,
 
 $$
 \det(\partial^2)=\int[d\bar{c}][dc]\,
