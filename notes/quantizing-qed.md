@@ -304,10 +304,86 @@ $$
 \exp\left[-\frac{i}{2\xi}\int d^4x\,f(x)^2\right].
 $$
 
-Because the result is independent of the particular gauge slice, this averaging only changes the normalization. Using the delta functional to set $f=\partial_\mu A^\mu$ gives the covariant gauge-fixed partition function:
+More explicitly, after inserting the Faddeev-Popov identity with
+
+$$
+G_f(A)=\partial_\mu A^\mu-f,
+$$
+
+we have
 
 $$
 \mathcal{Z}
+=\int[dA]\,\det(\partial^2)\,
+\delta[\partial_\mu A^\mu-f]\,
+e^{iS[A]}.
+$$
+
+Now multiply by the Gaussian average over $f$:
+
+$$
+\mathcal{Z}_\xi
+=\int[df]\,
+\exp\left[-\frac{i}{2\xi}\int d^4x\,f^2\right]
+\int[dA]\,\det(\partial^2)\,
+\delta[\partial_\mu A^\mu-f]\,
+e^{iS[A]}.
+$$
+
+Equivalently, move all integrations into one expression:
+
+$$
+\mathcal{Z}_\xi
+=\int[dA][df]\,
+\det(\partial^2)\,
+\delta[\partial_\mu A^\mu-f]\,
+\exp\left[
+iS[A]-\frac{i}{2\xi}\int d^4x\,f^2
+\right].
+$$
+
+This is where $[df]$ goes: it is used up by the delta functional. The functional delta identity is
+
+$$
+\int[df]\,\delta[g-f]\,F[f]=F[g].
+$$
+
+Here
+
+$$
+g(x)=\partial_\mu A^\mu(x),
+$$
+
+so
+
+$$
+\int[df]\,
+\delta[\partial_\mu A^\mu-f]\,
+\exp\left[-\frac{i}{2\xi}\int d^4x\,f^2\right]
+=
+\exp\left[-\frac{i}{2\xi}\int d^4x\,(\partial_\mu A^\mu)^2\right].
+$$
+
+Therefore
+
+$$
+\mathcal{Z}_\xi
+=\int[dA]\,\det(\partial^2)\,
+\exp\left[
+iS[A]-\frac{i}{2\xi}\int d^4x\,(\partial_\mu A^\mu)^2
+\right].
+$$
+
+Since
+
+$$
+S[A]=\int d^4x\left(-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}\right),
+$$
+
+we can combine both terms in the exponent:
+
+$$
+\mathcal{Z}_\xi
 =\int[dA]\,\det(\partial^2)\,
 \exp\left(i\int d^4x\,\mathcal{L}_{FP}\right).
 $$
@@ -320,7 +396,7 @@ $$
 -\frac{1}{2\xi}(\partial_\mu A^{\mu})^2.
 $$
 
-Here $\xi$ is the gauge parameter. Different $\xi$ values change the propagator, but not gauge-invariant observables.
+There can also be an overall normalization constant from the Gaussian average over $f$ and the gauge-group volume. These constants are absorbed into the normalization of $\mathcal{Z}$ and cancel in normalized expectation values. Here $\xi$ is the gauge parameter. Different $\xi$ values change the propagator, but not gauge-invariant observables.
 
 ## The Gauge-Fixed Photon Propagator
 
