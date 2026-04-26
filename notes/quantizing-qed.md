@@ -240,14 +240,54 @@ $$
 \det(\partial^2)=\prod_p(-p^2),
 $$
 
-up to the usual regulator and normalization choices. The important simplification is that this determinant contains no $A_\mu$. In abelian QED, the ghosts decouple. If we introduce ghost fields anyway,
+up to the usual regulator and normalization choices. The important simplification is that this determinant contains no $A_\mu$.
+
+### What are ghost fields?
+
+Ghost fields are a computational device for representing the Faddeev-Popov determinant inside the path integral. They are not new physical particles in QED. They are auxiliary anticommuting fields, usually written $c(x)$ and $\bar{c}(x)$, whose only job is to reproduce the determinant coming from gauge fixing.
+
+The identity behind this is the Grassmann Gaussian integral. For ordinary commuting variables, a Gaussian integral gives an inverse determinant:
+
+$$
+\int d^n x\,\exp\left(-x_i A_{ij}x_j\right)\propto \frac{1}{\sqrt{\det A}}.
+$$
+
+For anticommuting Grassmann variables $\bar{\psi}_i,\psi_i$, the Gaussian gives a determinant instead:
+
+$$
+\int \prod_i d\bar{\psi}_i\,d\psi_i\,
+\exp\left(-\bar{\psi}_i A_{ij}\psi_j\right)
+=\det A.
+$$
+
+The field-theory version replaces the matrix $A_{ij}$ by a differential operator. In QED the Faddeev-Popov operator is
+
+$$
+M=\partial^2.
+$$
+
+So we may rewrite
 
 $$
 \det(\partial^2)=\int[d\bar{c}][dc]\,
 \exp\left(i\int d^4x\,\bar{c}\,\partial^2c\right),
 $$
 
-they are free fields with no photon interaction. This is very different from non-abelian Yang-Mills theory, where the determinant depends on $A_\mu$ and ghosts interact.
+up to convention-dependent signs and normalization constants. The corresponding ghost Lagrangian is
+
+$$
+\mathcal{L}_{ghost}=\bar{c}\,\partial^2 c.
+$$
+
+This has no $A_\mu$ in it, so the ghosts are free fields with no photon interaction. In perturbation theory that means there are no QED ghost-photon vertices. The ghost determinant is just an overall constant in the free abelian theory, so it cancels from normalized expectation values.
+
+This is very different from non-abelian Yang-Mills theory. There the gauge transformation contains a field-dependent term,
+
+$$
+A_\mu^a\to A_\mu^a + D_\mu^{ab}\lambda^b,
+$$
+
+so the Faddeev-Popov operator contains $A_\mu^a$. The ghost Lagrangian then contains ghost-gauge-field interactions, and ghosts become essential for preserving gauge invariance and unitarity in loop calculations.
 
 ### 4. Replace the Sharp Gauge Slice by a Gaussian Average
 
